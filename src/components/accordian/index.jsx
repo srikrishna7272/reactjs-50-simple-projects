@@ -1,26 +1,24 @@
 /* eslint-disable react/jsx-key */
 import { useState } from "react";
 import data from "./data";
-
 import "./styles.css";
 
 export default function Accordian() {
   const [selected, setSelected] = useState(null);
   const [enableMultiSelection, setEnableMultiSelection] = useState(false);
   const [multiple, setMultiple] = useState([]);
-
   function handleSingleSelection(getCurrentId) {
     setSelected(getCurrentId === selected ? null : getCurrentId);
   }
+
   function handleMultiSelection(getCurrentId) {
     let cpyMultiple = [...multiple];
     const findIndexOfCurrentId = cpyMultiple.indexOf(getCurrentId);
-    console.log(findIndexOfCurrentId);
     if (findIndexOfCurrentId === -1) cpyMultiple.push(getCurrentId);
     else cpyMultiple.splice(findIndexOfCurrentId, 1);
     setMultiple(cpyMultiple);
   }
-  console.log(selected, multiple);
+  console.log(selected);
   return (
     <div className="wrapper">
       <button onClick={() => setEnableMultiSelection(!enableMultiSelection)}>Enable Multi Selection</button>
@@ -45,7 +43,7 @@ export default function Accordian() {
             </div>
           ))
         ) : (
-          <div>No data found.</div>
+          <div>Data Not Found</div>
         )}
       </div>
     </div>
