@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Suggestions from "./suggestions";
+import "./styles.css";
 
 export default function SearchAutoComplete() {
   const [loading, setLoading] = useState(false);
@@ -54,8 +55,17 @@ export default function SearchAutoComplete() {
   console.log(users, filteredUsers);
   return (
     <div className="search-autocomplete-container">
-      <input name="search-users" value={searchParams} placeholder="Search users" type="text" onChange={handleChange} />
-      {showDropDown && <Suggestions handleClick={handleClick} data={filteredUsers} />}
+      <input
+        className="input-container"
+        name="search-users"
+        value={searchParams}
+        placeholder="Search users"
+        type="text"
+        onChange={handleChange}
+      />
+      <div className="child-container">
+        {showDropDown && <Suggestions handleClick={handleClick} data={filteredUsers} />}
+      </div>
     </div>
   );
 }
