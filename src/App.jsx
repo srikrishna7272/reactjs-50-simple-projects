@@ -22,6 +22,7 @@ import UseFetchHookTest from "./components/use-fetch/test";
 import UseOnClickOutsideTest from "./components/use-outside-click/test";
 import UseWindowResize from "./components/useWindow-resiza";
 import UseWindowReSizeTest from "./components/useWindow-resiza/test";
+import ScrollToTopAndBottom from "./components/Scroll-to-top-and-bottom";
 
 function App() {
   return (
@@ -46,7 +47,8 @@ function App() {
       </FeatureFlagGlobalState> */}
       {/* <UseFetchHookTest /> */}
       {/* <UseOnClickOutsideTest /> */}
-      <UseWindowReSizeTest />
+      {/* <UseWindowReSizeTest /> */}
+      <ScrollToTopAndBottom />
     </div>
   );
 }
