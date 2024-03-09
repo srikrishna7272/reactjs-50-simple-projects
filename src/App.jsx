@@ -24,6 +24,7 @@ import UseWindowResize from "./components/useWindow-resiza";
 import UseWindowReSizeTest from "./components/useWindow-resiza/test";
 import ScrollToTopAndBottom from "./components/Scroll-to-top-and-bottom";
 import ScrollToSection from "./components/Scroll-to-section";
+import Weather from "./components/check-weather-of-city/weather";
 
 function App() {
   return (
@@ -50,7 +51,8 @@ function App() {
       {/* <UseOnClickOutsideTest /> */}
       {/* <UseWindowReSizeTest /> */}
       {/* <ScrollToTopAndBottom /> */}
-      <ScrollToSection />
+      {/* <ScrollToSection /> */}
+      <Weather />
     </div>
   );
 }

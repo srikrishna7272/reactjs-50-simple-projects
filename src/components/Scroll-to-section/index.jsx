@@ -48,7 +48,7 @@ export default function ScrollToSection() {
   ];
   function handleScrollToSection() {
     // ref.current.scrollIntoView({ behaviour: "smooth" });
-    let pos = ref.current.getBoundingClientRect().bottom;
+    let pos = ref.current.getBoundingClientRect().top;
     console.log(ref.current);
     window.scrollTo({
       top: pos,
