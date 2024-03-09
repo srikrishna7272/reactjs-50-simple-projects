@@ -18,7 +18,6 @@ export default function ScrollToTopAndBottom() {
     });
   }
   function handleScrollToBottom() {
-    console.log(bottomRef);
     bottomRef.current.scrollIntoView({ behaviour: "smooth" });
   }
   return (
